@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--plus-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="AdditionViewController" customModule="Salon_Task7" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tsK-6x-8AL">
+                                <rect key="frame" x="147" y="54" width="120" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="76d-De-Y8U"/>
+                                    <constraint firstAttribute="width" constant="120" id="Qce-ZL-oI5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hgi-uD-A97">
+                                <rect key="frame" x="147" y="99" width="120" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="nCB-ta-5nq"/>
+                                    <constraint firstAttribute="width" constant="120" id="pDP-Na-Z8J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDm-NP-Wf6">
+                                <rect key="frame" x="177" y="154" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="OaL-wZ-p7B"/>
+                                    <constraint firstAttribute="height" constant="30" id="vwh-12-ukU"/>
+                                </constraints>
+                                <state key="normal" title="addition"/>
+                                <connections>
+                                    <action selector="calculationAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="16J-uq-ctU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9j-uC-atS">
+                                <rect key="frame" x="184.5" y="214" width="45" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Gd2-dU-0mh"/>
+                                    <constraint firstAttribute="width" constant="45" id="KvT-wS-CFP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.91980725526809692" green="0.59083533159868495" blue="0.47840749155129214" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="h9j-uC-atS" firstAttribute="top" secondItem="lDm-NP-Wf6" secondAttribute="bottom" constant="30" id="5pC-3y-t77"/>
+                            <constraint firstItem="lDm-NP-Wf6" firstAttribute="top" secondItem="hgi-uD-A97" secondAttribute="bottom" constant="20" id="6JB-ED-j8v"/>
+                            <constraint firstItem="tsK-6x-8AL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="6ea-fb-M2h"/>
+                            <constraint firstItem="lDm-NP-Wf6" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="BmC-SP-OWP"/>
+                            <constraint firstItem="h9j-uC-atS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HaK-uI-eev"/>
+                            <constraint firstItem="tsK-6x-8AL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="aYf-Zb-fz7"/>
+                            <constraint firstItem="hgi-uD-A97" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gmW-pz-6CT"/>
+                            <constraint firstItem="hgi-uD-A97" firstAttribute="top" secondItem="tsK-6x-8AL" secondAttribute="bottom" constant="10" id="pUI-Up-OWS"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="plus" id="nNQ-S9-dDf">
+                        <imageReference key="image" image="plus.circle" catalog="system" symbolScale="medium"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="downTextField" destination="hgi-uD-A97" id="n7Y-m1-oPf"/>
+                        <outlet property="resultLabel" destination="h9j-uC-atS" id="84w-8d-9cy"/>
+                        <outlet property="topTextField" destination="tsK-6x-8AL" id="m5J-RD-bML"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="116"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>
