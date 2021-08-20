@@ -9,11 +9,11 @@ import Foundation
 
 class CalculationModel {
 
-    func addition(num1:Int, num2:Int) ->Int {
+    func addition(num1: Int, num2: Int) -> Int {
         num1 + num2
     }
 
-    func subtraction(num1:Int, num2:Int) ->Int {
+    func subtraction(num1: Int, num2: Int) -> Int {
         num1 - num2
     }
 }

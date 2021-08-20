@@ -18,8 +18,8 @@ class AdditionViewController: UIViewController {
 
         guard let topText = topTextField.text else { return }
         guard let downText = downTextField.text else { return }
-        guard let topNum = NumberFormatter().number(from: topText) as? Int else { return }
-        guard let downNum = NumberFormatter().number(from: downText) as? Int else { return }
+        guard let topNum = Int(topText) else { return }
+        guard let downNum = Int(downText) else { return }
 
         let result = calculationModel.addition(num1: topNum, num2: downNum)
         resultLabel.text = String(result)
@@ -30,15 +30,15 @@ class AdditionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.topTextField.keyboardType = UIKeyboardType.numberPad
-        self.downTextField.keyboardType = UIKeyboardType.numberPad
+        topTextField.keyboardType = .numberPad
+        downTextField.keyboardType = .numberPad
 
         let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tapGR.cancelsTouchesInView = false
-        self.view.addGestureRecognizer(tapGR)
+        view.addGestureRecognizer(tapGR)
     }
 
     @objc func dismissKeyboard() {
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
 }
